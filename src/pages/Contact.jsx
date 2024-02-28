@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Canvas } from "@react-three/fiber";
+import Fox from "../models/Fox";
+import Loader from "../components/Loader";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -9,24 +12,24 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [currentAnimation, setCurrentAnimation] = useState("idle");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleFocus = (e) => {
-    e.target.classList.add("focus");
+    setCurrentAnimation("walk");
   };
 
   const handleBlur = (e) => {
-    if (e.target.value === "") {
-      e.target.classList.remove("focus");
-    }
+    setCurrentAnimation("idle");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setCurrentAnimation("hit");
 
     emailjs
       .send(
@@ -50,10 +53,14 @@ const Contact = () => {
             email: "",
             message: "",
           });
+          setTimeout(() => {
+            setCurrentAnimation("idle");
+          }, 3000);
         },
         (error) => {
           console.log(error.text);
           setLoading(false);
+          setCurrentAnimation("idle");
         }
       )
       .catch((error) => {
@@ -123,6 +130,20 @@ const Contact = () => {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
+      </div>
+      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
+        <Canvas camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 1000 }}>
+          <directionalLight position={[0, 0, 1]} intensity={3} />
+          <ambientLight intensity={0.5} />
+          <Suspense fallback={<Loader />}>
+            <Fox
+              currentAnimation={currentAnimation}
+              position={[0.5, 0.35, 0]}
+              rotation={[12.6, -0.6, 0]}
+              scale={[0.6, 0.6, 0.6]}
+            />
+          </Suspense>
+        </Canvas>
       </div>
     </section>
   );
