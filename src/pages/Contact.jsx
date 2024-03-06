@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import Fox from "../models/Fox";
 import Loader from "../components/Loader";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -46,6 +48,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          toast.success("Message sent successfully!", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
           console.log(result.text);
           setLoading(false);
           setForm({
@@ -55,9 +66,18 @@ const Contact = () => {
           });
           setTimeout(() => {
             setCurrentAnimation("idle");
-          }, 3000);
+          }, 2000);
         },
         (error) => {
+          toast.error("Failed to send message!", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
           console.log(error.text);
           setLoading(false);
           setCurrentAnimation("idle");
@@ -71,6 +91,7 @@ const Contact = () => {
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
+      <ToastContainer />
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 
