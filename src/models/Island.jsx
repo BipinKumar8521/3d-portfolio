@@ -96,6 +96,11 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     gl.domElement.addEventListener("pointerup", handlePointerUp);
     gl.domElement.addEventListener("pointermove", handlePointerMove);
 
+    //for touches
+    gl.domElement.addEventListener("touchstart", handlePointerDown);
+    gl.domElement.addEventListener("touchend", handlePointerUp);
+    gl.domElement.addEventListener("touchmove", handlePointerMove);
+
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("keyup", handleKeyUp);
 
