@@ -25,13 +25,13 @@ const Projects = () => {
           <div key={index} className="lg:w-[400px] w-full">
             <div className="block-container w-12 h-12">
               <div className={`btn-back rounded-xl ${project.theme}`} />
-              <div className="btn-front rounded-xl flex justify-center items-center">
+              {/* <div className="btn-front rounded-xl flex justify-center items-center">
                 <img
                   src={project.iconUrl}
                   alt="Project Icon"
                   className="w-1/2 h-1/2 object-contain"
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className="mt-5 flex flex-col">

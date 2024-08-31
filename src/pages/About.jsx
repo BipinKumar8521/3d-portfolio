@@ -29,7 +29,11 @@ const About = () => {
 
         <div className="mt-16 flex flex-wrap gap-12 justify-center items-center ">
           {skills.map((skill) => (
-            <div key={skill.name} className="flex block-container w-20 h-20">
+            <div
+              title={skill.name}
+              key={skill.name}
+              className="flex block-container w-20 h-20"
+            >
               <div className="btn-back rounded-xl" />
               <div className="btn-front rounded-xl flex justify-center items-center">
                 <img
@@ -47,11 +51,13 @@ const About = () => {
         <h3 className="subhead-text">Work Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
-            I've worked as a freelance web developer for over 3 years. During
-            this time, I've built websites for a variety of clients, from small
-            businesses to large corporations. I'm comfortable working with
-            clients to understand their needs and deliver a product that meets
-            their expectations.
+            I've gained valuable experience as a developer by working on various
+            projects and roles. During this time, I've developed and maintained
+            websites and applications for different organizations, including
+            college societies and tech platforms. I'm skilled in collaborating
+            with teams, understanding project requirements, and delivering
+            high-quality, user-friendly solutions that meet both technical and
+            user needs.
           </p>
         </div>
 
@@ -61,15 +67,15 @@ const About = () => {
               <VerticalTimelineElement
                 key={experience.company_name}
                 date={experience.date}
-                icon={
-                  <div className="flex justify-center items-center w-full h-full">
-                    <img
-                      src={experience.icon}
-                      alt={experience.company_name}
-                      className="w-[60%] h-[60%] object-contain"
-                    />
-                  </div>
-                }
+                // icon={
+                //   <div className="flex justify-center items-center w-full h-full">
+                //     <img
+                //       src={experience.icon}
+                //       alt={experience.company_name}
+                //       className="w-[60%] h-[60%] object-contain"
+                //     />
+                //   </div>
+                // }
                 iconStyle={{
                   background: experience.iconBg,
                 }}

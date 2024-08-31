@@ -5,6 +5,7 @@ import Fox from "../models/Fox";
 import Loader from "../components/Loader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { socialLinks } from "../constants";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -94,7 +95,6 @@ const Contact = () => {
       <ToastContainer />
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
-
         <form
           className="w-full flex flex-col gap-7 mt-14"
           onSubmit={handleSubmit}
@@ -151,6 +151,19 @@ const Contact = () => {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
+        {/* <div className="flex flex-row m-2">
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.link}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2"
+            >
+              <img src={link.iconUrl} alt={link.name} className="w-6 h-6" />
+            </a>
+          ))}
+        </div> */}
       </div>
       <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
         <Canvas camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 1000 }}>

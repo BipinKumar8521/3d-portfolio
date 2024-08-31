@@ -62,16 +62,12 @@ export const skills = [
     name: "MongoDB",
     type: "Database",
   },
-  {
-    imageUrl: motion,
-    name: "Motion",
-    type: "Animation",
-  },
-  {
-    imageUrl: mui,
-    name: "Material-UI",
-    type: "Frontend",
-  },
+
+  // {
+  //   imageUrl: mui,
+  //   name: "Material-UI",
+  //   type: "Frontend",
+  // },
   {
     imageUrl: nextjs,
     name: "Next.js",
@@ -87,16 +83,16 @@ export const skills = [
     name: "React",
     type: "Frontend",
   },
-  {
-    imageUrl: redux,
-    name: "Redux",
-    type: "State Management",
-  },
-  {
-    imageUrl: sass,
-    name: "Sass",
-    type: "Frontend",
-  },
+  // {
+  //   imageUrl: redux,
+  //   name: "Redux",
+  //   type: "State Management",
+  // },
+  // {
+  //   imageUrl: sass,
+  //   name: "Sass",
+  //   type: "Frontend",
+  // },
   {
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
@@ -111,124 +107,79 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Subhead",
+    company_name: "National Students’ Space Challenge 2023",
+    icon: "", // Replace this with the actual icon variable or image link
     iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
+    date: "July 2023 - Aug 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed and developed frontend of multiple pages for the National Students’ Space Challenge 2023.",
+      "Utilized React.js best practices along with collaboration with co-team members using Git and GitHub.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Executive Member",
+    company_name: "Space Technology Students’ Society",
+    icon: "", // Replace this with the actual icon variable or image link
     iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
+    date: "May 2023 - Feb 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed and developed pages for the Space Technology Students’ Society using React JS.",
+      "Monitored the society's codebase to ensure its stability and fixed minor bugs to improve overall performance.",
+      "Led an online web development workshop, mentored 100+ students, and distributed completion certificates.",
     ],
   },
 ];
 
 export const socialLinks = [
-  {
-    name: "Contact",
-    iconUrl: contact,
-    link: "/contact",
-  },
+  // {
+  //   name: "Contact",
+  //   iconUrl: contact,
+  //   link: "/contact",
+  // },
   {
     name: "GitHub",
     iconUrl: github,
-    link: "https://github.com/YourGitHubUsername",
+    link: "https://github.com/bipinkumar8521",
   },
   {
     name: "LinkedIn",
     iconUrl: linkedin,
-    link: "https://www.linkedin.com/in/YourLinkedInUsername",
+    link: "https://www.linkedin.com/in/https://www.linkedin.com/in/bipin-kumar-iitkgp/",
   },
 ];
 
 export const projects = [
   {
-    iconUrl: pricewise,
+    iconUrl: "", // Replace with actual icon URL or variable
     theme: "btn-back-red",
-    name: "Amazon Price Tracker",
+    name: "StudySphere",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+      "Developed a teaching and learning platform using Next.js with features like one-click login, video conferencing, secure payment processing, and automated certificate generation.",
+    link: "https://studysphere-dev.vercel.app/", // Replace with the actual GitHub link if available
   },
   {
-    iconUrl: threads,
+    iconUrl: "", // Replace with actual icon URL or variable
     theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
+    name: "ImageGenius",
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
+      "Built an AI-powered image transformation platform featuring generative fill, image restoration, and secure payment handling with Razorpay.",
+    link: "https://imagegenius-ai.vercel.app/", // Replace with the actual GitHub link if available
   },
   {
-    iconUrl: car,
+    iconUrl: "", // Replace with actual icon URL or variable
     theme: "btn-back-blue",
-    name: "Car Finding App",
+    name: "YourPlaces",
     description:
-      "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
+      "Created a full-stack MERN social platform allowing users to share and explore different places, complete with image upload, authentication, and advanced search functionality.",
+    link: "https://yourplacesweb.netlify.app/", // Replace with the actual GitHub link if available
   },
   {
-    iconUrl: snapgram,
-    theme: "btn-back-pink",
-    name: "Full Stack Instagram Clone",
-    description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-    link: "https://github.com/adrianhajdin/social_media_app",
-  },
-  {
-    iconUrl: estate,
-    theme: "btn-back-black",
-    name: "Real-Estate Application",
-    description:
-      "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-    link: "https://github.com/adrianhajdin/projects_realestate",
-  },
-  {
-    iconUrl: summiz,
+    iconUrl: "", // Replace with actual icon URL or variable
     theme: "btn-back-yellow",
-    name: "AI Summarizer Application",
+    name: "Magic Match Game",
     description:
-      "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
-    link: "https://github.com/adrianhajdin/project_ai_summarizer",
+      "Built a React-based memory match game with features like a timer, high-score tracking using local storage, music integration, and user feedback through EmailJS.",
+    link: "https://bipinkumar8521.github.io/memory-match/",
   },
 ];
